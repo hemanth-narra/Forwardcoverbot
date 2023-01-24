@@ -1,0 +1,4 @@
+API_ID = YOUR API ID # Get it from https://my.telegram.org/
+API_HASH = "YOUR API HASH" # Get it from https://my.telegram.org/
+BOT_TOKEN = 'YOUR BOT TOKEN' # Get it from https://t.me/BotFather
+LOG_CHANNEL = YOUR CHANNEL ID/@usernameofchannel # Bot should be the admin of the channel.
