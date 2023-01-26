@@ -11,7 +11,8 @@ app = Client("forwardcover", api_id=config.API_ID, api_hash=config.API_HASH, bot
 # Handle the commands
 @app.on_message(filters.command('start') & filters.private)
 async def start(app, message):
-    await message.reply_text(f"Hi{message.from_user.first_name}, I'm simple forward cover bot.\nI will echo everything you send.", quote=True)
+    await message.reply_text(f"Hi {message.from_user.first_name}!, I'm simple forward cover bot.\nI will echo everything you send.", quote=True)
+    logging.info(f'{message.from_user.id} started the bot.')
 
 @app.on_message(filters.text & filters.private)
 async def text(app, message):
