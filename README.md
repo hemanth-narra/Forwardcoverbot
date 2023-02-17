@@ -22,7 +22,13 @@ This is a simple Telegram bot that echoes messages and media sent to it. It uses
 2. Install the required libraries:
 `pip install -r requirements.txt`
 
-3. Edit a `config.py.sample` file and add your values and save it as `config.py`
+3. Create a `config.py` file. Add your values 
+
+`API_ID = "YOUR API ID"`
+
+`API_HASH = "YOUR API HASH"` 
+
+`LOG_CHANNEL = " YOUR CHANNEL"`
 
 ## Usage
 
