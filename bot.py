@@ -21,31 +21,37 @@ async def start(app, message):
 @app.on_message(filters.text & filters.private)
 async def text(app, message):
     await message.reply_text(message.text)
+    await message.delete()
 
 @app.on_message(filters.photo & filters.private)
 async def ephoto(app, message):
     file_id = message.photo.file_id
     await app.send_photo(chat_id=message.from_user.id, photo=file_id)
+    await message.delete()
 
 @app.on_message(filters.video & filters.private)
 async def evideo(app, message):
     file_id = message.video.file_id
     await app.send_video(chat_id=message.from_user.id, video=file_id)
+    await message.delete()
 
 
 @app.on_message(filters.document & filters.private)
 async def edoc(app, message):
     file_id = message.document.file_id
     await app.send_document(chat_id=message.from_user.id, document=file_id)
+    await message.delete()
 
 @app.on_message(filters.audio & filters.private)
 async def eaudio(app, message):
     file_id = message.audio.file_id
     await app.send_audio(chat_id=message.from_user.id, audio=file_id)
+    await message.delete()
 
 @app.on_message(filters.voice & filters.private)
 async def evoice(app, message):
     file_id = message.voice.file_id
     await app.send_voice(chat_id=message.from_user.id, voice=file_id)
+    await message.delete()
 
 app.run()
